@@ -21,7 +21,26 @@
 
 
 ## 디렉토리 구조
-
+├── _Android
+│   ├── _.idea
+│       ├── _codeStyles
+│       │   └── Project.xml
+│       └── gradle.xml
+│   ├── _app
+│   ├── _gradle/wrapper
+│   ├── .gitignore
+│   ├── build.gradle
+│   ├── gradle.properties
+│   ├── gradlew
+│   ├── gradlew.bat
+│   └── settings.gradle
+├── _Web
+│   ├── .gitignore
+│   └── build.gradle
+├── _Process_Server
+│   ├── footer.html
+│   └── header.html
+└── README.md
 
 ## 팀
 
