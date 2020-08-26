@@ -18,6 +18,7 @@
 <table>
     <thead>
         <tr>
+            <th>  </th>
             <th>IoT CCTV 영역</th>
             <th>영상 처리</th>
             <th>Wep App</th>
@@ -27,23 +28,33 @@
     <tbody>
         <tr>
             <td>개발언어</td>
-            <td>운영체제</td>
-            <td>프레임워크</td>
-            <td>라이브러리</td>
-            <td>개발 보드</td>
-            <td>데이터베이스</td>
-            <td>버전 관리</td>
-            <td>기타</td>
         </tr>
         <tr>
+            <td>운영체제</td>
             <td>L3 Name B</td>
         </tr>
         <tr>
+            <td>프레임워크</td>
             <td rowspan=2>L2 Name B</td>
             <td>L3 Name C</td>
         </tr>
         <tr>
+            <td>라이브러리</td>
             <td>L3 Name D</td>
+        </tr>
+        <tr>
+            <td>개발 보드</td>
+        </tr>
+        <tr>
+            <td>데이터베이스</td>
+        </tr>
+        <tr>
+            <td>버전 관리</td>
+            <td calspan=4>GitHub</td>
+        </tr>
+        <tr>
+            <td>기타</td>
+            <td calspan=4>Google Meet, Google Drive</td>
         </tr>
     </tbody>
 </table>
