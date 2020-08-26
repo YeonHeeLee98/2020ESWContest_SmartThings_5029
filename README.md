@@ -55,50 +55,50 @@
     </thead>
     <tbody align="center">
         <tr>
-            <td><b> 개발언어</b></td>
+            <td><b> 개발언어 </b></td>
             <td>Python</td>
             <td>Python</td>
             <td>HTML, JavaScript</td>
             <td>JAVA</td>
         </tr>
         <tr>
-            <td>운영체제</td>
+            <td><b> 운영체제 </b></td>
             <td>Raspbian</td>
             <td>Ubuntu 18.04</td>
             <td>Windows 10</td>
             <td>Android OS</td>
         </tr>
         <tr>
-            <td>프레임워크</td>
+            <td><b> 프레임워크 </b></td>
             <td> </td>
             <td>Apache Spark</td>
             <td> </td>
             <td> </td>
         </tr>
         <tr>
-            <td>라이브러리</td>
+            <td><b> 라이브러리 </b></td>
             <td></td>
             <td>OpenCV,Pyspark3.0,Tensorflow2.0,Numpy 1.16</td>
             <td>Firebase JavaScript SDK</td>
             <td>Firebase Android SDK</td>
         </tr>
         <tr>
-            <td>개발 보드</td>
+            <td><b> 개발 보드</b></td>
             <td>RPI3B+</td>
             <td> </td>
             <td> </td>
             <td> </td>
         </tr>
         <tr>
-            <td>데이터베이스</td>
+            <td><b> 데이터베이스 </b></td>
             <td colspan=4>Firebase RealtimeDB, Google Cloud Storage</td>
         </tr>
         <tr>
-            <td>버전 관리</td>
+            <td><b> 버전 관리 </b></td>
             <td colspan=4>GitHub</td>
         </tr>
         <tr>
-            <td>기타</td>
+            <td><b> 기타 </b></td>
             <td colspan=4>Google Meet, Google Drive</td>
         </tr>
     </tbody>
