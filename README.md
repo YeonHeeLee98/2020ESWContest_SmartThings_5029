@@ -35,18 +35,23 @@
         </tr>
         <tr>
             <td>프레임워크</td>
-            <td rowspan=2>L2 Name B</td>
-            <td>L3 Name C</td>
+            <td> </td>
+            <td>Apache Spark</td>
         </tr>
         <tr>
             <td>라이브러리</td>
-            <td>L3 Name D</td>
+            <td></td>
+            <td>OpenCV,Pyspark3.0,Tensorflow2.0,Numpy 1.16</td>
+            <td>Firebase JavaScript SDK</td>
+            <td>Firebase Android SDK</td>
         </tr>
         <tr>
             <td>개발 보드</td>
+            <td>RPI3B+</td>
         </tr>
         <tr>
             <td>데이터베이스</td>
+            <td colspan=4>Firebase RealtimeDB, Google Cloud Storage</td>
         </tr>
         <tr>
             <td>버전 관리</td>
