@@ -28,10 +28,17 @@
     <tbody>
         <tr>
             <td>개발언어</td>
+            <td>Python</td>
+            <td>Python</td>
+            <td>HTML, JavaScript</td>
+            <td>JAVA</td>
         </tr>
         <tr>
             <td>운영체제</td>
-            <td>L3 Name B</td>
+            <td>Raspbian</td>
+            <td>Ubuntu 18.04</td>
+            <td>Windows 10</td>
+            <td>Android OS</td>
         </tr>
         <tr>
             <td>프레임워크</td>
@@ -68,16 +75,7 @@
         </tr>
     </tbody>
 </table>
-||IoT CCTV 영역|영상 처리|Wep App|Android App|
-|:---:|:---:|:---:|:---:|:---:|
-| 개발언어| | | |
-|운영체제 | | | |
-| 프레임워크| | | |
-| 라이브러리| | | |
-| 개발 보드 | | | |
-|데이터베이스 | | | |
-| 버전 관리| GitHub|
-| 기타|Google Meet, Google Drive |
+
 
 ## 디렉토리 구조
 ```
