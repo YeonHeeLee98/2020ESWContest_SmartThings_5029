@@ -1,6 +1,5 @@
-# 2020ESWContest_SmartThings_5029
 
-<p align="center"><img src="./img/주차의민족.png" width="200" style="border-radius:10%"></p>
+<p align="center"><img src="./img/주차의민족.png" width="300" style="border-radius:10%"></p>
 <h1 align="center"> ParkingScanner </h1>
 
 
