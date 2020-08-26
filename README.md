@@ -17,7 +17,7 @@
 ## 개발 환경 
 <table>
     <thead align="center">
-        <tr>
+        <tr align="center">
             <th>  </th>
             <th>IoT CCTV 영역</th>
             <th>영상 처리</th>
@@ -25,7 +25,7 @@
             <th>Android App</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody align="center">
         <tr>
             <td>개발언어</td>
             <td>Python</td>
