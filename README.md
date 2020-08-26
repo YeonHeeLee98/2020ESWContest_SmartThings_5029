@@ -104,8 +104,9 @@
 
 
 ## 디렉토리 구조
+
 ```
- ├── _Android  
+ ├── <b>_Android </b>
  │   ├── _.idea  
  │   ├── _app
  │   │   ├── _libs
