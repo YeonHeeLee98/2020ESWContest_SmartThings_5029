@@ -28,39 +28,35 @@
  │   │   ├── _libs
  │   │   ├── _src
  │   │   │   ├── _androidTest/java/com/example/Smart_Parking_System
- │   │   │   ├── _main
- │   │   │   │   ├── _java/com/example/Smart_Parking_System
- │   │   │   │   │   ├── Car.java
- │   │   │   │   │   ├── CarAdapter.java
- │   │   │   │   │   ├── MainActivity.java
- │   │   │   │   │   └── ParkingLotActivity.java
- │   │   │   │   ├── _res
- │   │   │   │   │   ├── _layout
- │   │   │   │   │   │   ├── activity_main.xml
- │   │   │   │   │   │   ├── activity_parking_lot.xml
- │   │   │   │   │   │   └── car_item.xml
- │   │   │   │   │   └── ...
- │   │   │   │   └── ...
- │   │   │   └── _test/java/com/example/Smart_Parking_System
- │   │   ├── .gitignore
- │   │   ├── build.gradle
- │   │   └── proguard-rules.pro
- │   ├── _gradle/wrapper  
- │   ├── .gitignore  
- │   ├── build.gradle  
- │   ├── gradle.properties  
- │   ├── gradlew  
- │   ├── gradlew.bat  
- │   └── settings.gradle  
+ │   │   │   ├── _test/java/com/example/Smart_Parking_System
+ │   │   │   └── _main
+ │   │   └── ... ├── _java/com/example/Smart_Parking_System
+ │   │           ├── Car.java
+ │   │           │   ├── CarAdapter.java
+ │   │           │   ├── MainActivity.java
+ │   │           │   └── ParkingLotActivity.java
+ │   │           ├── _res
+ │   │           │   ├── _layout
+ │   │           │   │   ├── activity_main.xml
+ │   │           │   │   ├── activity_parking_lot.xml
+ │   │           │   │   └── car_item.xml
+ │   │           │   └── ...
+ │   │           └── ...
+ │   │      
+ │   │   
+ │   └── ... 
+ │
  ├── _Web  
  │   ├── _public
  │   │   ├── app.js
  │   │   ├── config.js
  │   │   ├── firebase-messaging-sw.js
  │   │   └── index.html
+ │   │
  │   ├── database.rules.json
  │   ├── firebase.json
  │   └── package-lock.json
+ │
  ├── _Process_Server  
  │   ├── _CarPlate 
  │   │   ├── car_number_model.py
@@ -72,11 +68,13 @@
  │   │   ├── darknet.py
  │   │   ├── park_other_place.py
  │   │   └── yolo_methods.py
+ │   │
  │   ├── cv2_compare.py 
  │   ├── firebase_test.py
  │   ├── main.py
  │   ├── measure_img_similarity.py
  │   └── vid_server.py
+ │
  └── README.md  
  ```
 
