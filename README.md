@@ -24,7 +24,7 @@
     - CNN 기반의 주차공간별 주차 여부 판단을 위한 딥러닝 모델 
         - 주차공간별로 주차 여부를 판단하기 위해 딥러닝 모델. 모델은 이미지 처리에 뛰어난 성능을 보이는 CNN(Convolutional Neural Network) 기반으로 구현
     - 특별주차구역 불법주차 차량의 번호판 인식 알고리즘 개발
-        - 특별주차구역이란 특정 주차 대상이 지정되어 있는 공간을 의미. 
+        - 특별주차구역이란 특정 주차 대상이 지정되어 있는 공간을 의미
         - 해당 구역의 불법주차 차량 검출을 위해 번호판 검출 및 인식 알고리즘
     - 주차구역 이외 공간의 불법주차 차량 검출을 위한 YOLO 기반의 딥러닝 모델
         - 주차장의 혼잡도를 낮추고 정해진 주차구역 이외의 공간에 주차된 차량을 탐지하기 위해 불법주차 차량 검출 모델
@@ -55,7 +55,7 @@
     </thead>
     <tbody align="center">
         <tr>
-            <td>개발언어</td>
+            <td><b> 개발언어</b></td>
             <td>Python</td>
             <td>Python</td>
             <td>HTML, JavaScript</td>
@@ -166,7 +166,7 @@
 
 - 팀명 : 주차의 민족
 - 팀원
-  - 정영석 / dnfkdi1995@gmail.com
+  - 정영석(Project Leader) / dnfkdi1995@gmail.com
   - 이연희 / yhlee98y@gmail.com
   - 노재영 / groove38@naver.com
   - 손주형 / jhson722@naver.com
