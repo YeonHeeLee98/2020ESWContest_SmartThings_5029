@@ -1,5 +1,5 @@
 
-<p align="center"><img src="./img/주차의민족.png" width="300" style="border-radius:10%"></p>
+<p align="center"><img src="./img/주차의민족.png" width="500" style="border-radius:10%"></p>
 <h1 align="center"> ParkingScanner </h1>
 
 
@@ -16,6 +16,16 @@
 
 ## 개발 환경 
 
+||IoT CCTV 영역|영상 처리|Wep App|Android App|
+|:---:|:---:|:---:|:---:|:---:|
+| 개발언어| | | |
+|운영체제 | | | |
+| 프레임워크| | | |
+| 라이브러리| | | |
+| 개발 보드 | | | |
+|데이터베이스 | | | |
+| 버전 관리| GitHub|
+| 기타|Google Meet, Google Drive |
 
 ## 디렉토리 구조
 ```
