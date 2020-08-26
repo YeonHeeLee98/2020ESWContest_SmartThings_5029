@@ -50,11 +50,11 @@
         </tr>
         <tr>
             <td>버전 관리</td>
-            <td calspan=4>GitHub</td>
+            <td colspan=4>GitHub</td>
         </tr>
         <tr>
             <td>기타</td>
-            <td calspan=4>Google Meet, Google Drive</td>
+            <td colspan=4>Google Meet, Google Drive</td>
         </tr>
     </tbody>
 </table>
