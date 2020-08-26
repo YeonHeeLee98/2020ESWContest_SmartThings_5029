@@ -37,6 +37,8 @@
             <td>프레임워크</td>
             <td> </td>
             <td>Apache Spark</td>
+            <td> </td>
+            <td> </td>
         </tr>
         <tr>
             <td>라이브러리</td>
@@ -48,6 +50,9 @@
         <tr>
             <td>개발 보드</td>
             <td>RPI3B+</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
         </tr>
         <tr>
             <td>데이터베이스</td>
