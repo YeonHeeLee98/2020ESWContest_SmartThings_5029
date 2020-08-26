@@ -29,6 +29,11 @@
  │   │   ├── _src
  │   │   │   ├── _androidTest/java/com/example/Smart_Parking_System
  │   │   │   ├── _main
+ │   │   │   │   ├── _java/com/example/Smart_Parking_System
+ │   │   │   │   │   ├── Car.java
+ │   │   │   │   │   ├── CarAdapter.java
+ │   │   │   │   │   ├── MainActivity.java
+ │   │   │   │   │   └── ParkingLotActivity.java
  │   │   │   │   ├── _res
  │   │   │   │   │   ├── _layout
  │   │   │   │   │   │   ├── activity_main.xml
@@ -48,11 +53,28 @@
  │   ├── gradlew.bat  
  │   └── settings.gradle  
  ├── _Web  
- │   ├── .gitignore  
- │   └── build.gradle  
+ │   ├── _public
+ │   │   ├── app.js
+ │   │   ├── config.js
+ │   │   ├── firebase-messaging-sw.js
+ │   │   └── index.html
+ │   ├── database.rules.json
+ │   ├── firebase.json
+ │   └── package-lock.json
  ├── _Process_Server  
- │   ├── footer.html  
- │   └── header.html  
+ │   ├── _CarPlate 
+ │   ├── _CarUtility
+ │   │   ├── car_obs.py
+ │   │   └── new_section_split2.py
+ │   ├── _yolo
+ │   │   ├── darknet.py
+ │   │   ├── park_other_place.py
+ │   │   └── yolo_methods.py
+ │   ├── cv2_compare.py 
+ │   ├── firebase_test.py
+ │   ├── main.py
+ │   ├── measure_img_similarity.py
+ │   └── vid_server.py
  └── README.md  
  ```
 
