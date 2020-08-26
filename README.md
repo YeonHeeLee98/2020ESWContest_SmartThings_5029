@@ -63,6 +63,8 @@
  │   └── package-lock.json
  ├── _Process_Server  
  │   ├── _CarPlate 
+ │   │   ├── car_number_model.py
+ │   │   └── car_number_preprocessing.py
  │   ├── _CarUtility
  │   │   ├── car_obs.py
  │   │   └── new_section_split2.py
@@ -81,12 +83,12 @@
 ## 팀
 
 - 팀명 : 주차의 민족
-- 팀원 및 역할
-  - 정영석 : 
-  - 이연희 : 
-  - 노재영 : 
-  - 손주형 : 
-  - 김도경 : 
+- 팀원
+  - 정영석 / dnfkdi1995@gmail.com
+  - 이연희 / yhlee98y@gmail.com
+  - 노재영 / groove38@naver.com
+  - 손주형 / jhson722@naver.com
+  - 김도경 / jes1456@naver.com
 
 
 
