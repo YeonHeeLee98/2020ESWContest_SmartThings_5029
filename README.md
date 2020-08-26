@@ -1,5 +1,5 @@
 
-<p align="center"><img src="./img/주차의민족.png" width="500" style="border-radius:10%"></p>
+<p align="center"><img src="./img/주차의민족.png" width="400" style="border-radius:10%"></p>
 <h1 align="center"> ParkingScanner </h1>
 
 
