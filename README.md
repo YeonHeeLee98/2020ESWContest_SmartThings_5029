@@ -106,7 +106,7 @@
 ## 디렉토리 구조
 
 ```
- ├── <b>_Android </b>
+ ├── _Android
  │   ├── _.idea  
  │   ├── _app
  │   │   ├── _libs
@@ -165,7 +165,7 @@
 
 - 팀명 : 주차의 민족
 - 팀원
-  - 정영석(Project Leader) / dnfkdi1995@gmail.com
+  - 정영석 (Project Leader) / dnfkdi1995@gmail.com
   - 이연희 / yhlee98y@gmail.com
   - 노재영 / groove38@naver.com
   - 손주형 / jhson722@naver.com
