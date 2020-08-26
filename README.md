@@ -15,7 +15,38 @@
 <p align="center"><img src="./img/전체 아키텍쳐.png" width="800" style="border-radius:10%"></p>
 
 ## 개발 환경 
-
+<table>
+    <thead>
+        <tr>
+            <th>IoT CCTV 영역</th>
+            <th>영상 처리</th>
+            <th>Wep App</th>
+            <th>Android App</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>개발언어</td>
+            <td>운영체제</td>
+            <td>프레임워크</td>
+            <td>라이브러리</td>
+            <td>개발 보드</td>
+            <td>데이터베이스</td>
+            <td>버전 관리</td>
+            <td>기타</td>
+        </tr>
+        <tr>
+            <td>L3 Name B</td>
+        </tr>
+        <tr>
+            <td rowspan=2>L2 Name B</td>
+            <td>L3 Name C</td>
+        </tr>
+        <tr>
+            <td>L3 Name D</td>
+        </tr>
+    </tbody>
+</table>
 ||IoT CCTV 영역|영상 처리|Wep App|Android App|
 |:---:|:---:|:---:|:---:|:---:|
 | 개발언어| | | |
