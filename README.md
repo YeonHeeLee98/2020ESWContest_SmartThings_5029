@@ -21,7 +21,7 @@
 
 
 ## 디렉토리 구조
-
+```
  ├── _Android  
  │   ├── _.idea  
  │       ├── _codeStyles  
@@ -42,7 +42,7 @@
  │   ├── footer.html  
  │   └── header.html  
  └── README.md  
- 
+ ```
 
 ## 팀
 
