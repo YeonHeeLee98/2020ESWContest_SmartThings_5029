@@ -8,11 +8,8 @@
 
 2020 임베디드 소프트웨어 경진대회 'Smart Things' 부문 주차의 민족 팀입니다.
 
- 
-
-
 ## 시스템 개요 
-
+본 작품은 주차장을 실시간으로 통합 관리하기 위한 시스템이다. 해당 작품은 IoT(Internet of Things) CCTV를 통해 주차장 촬영을 수행하며 전송된 영상을 실시간 영상 분석을 통해 분석된 결과를 사용자와 관리자에게 제공한다. 사용자는 해당 시스템으로부터 주차장 이용률, 각 주차공간별 주차 여부 및 주차장의 정보를 제공받는다. 또한 관리자는 주차장의 이용률 및 주차장의 불법주차 여부를 제공받는다. 이를 통해 관리자는 주차장을 효율적으로 관리하며, 주차장 사용자에게는 보다 질 높은 서비스를 제공한다
 
 ## 시스템 구조
 
@@ -30,20 +27,19 @@
  │   │   │   ├── _androidTest/java/com/example/Smart_Parking_System
  │   │   │   ├── _test/java/com/example/Smart_Parking_System
  │   │   │   └── _main
- │   │   └── ... ├── _java/com/example/Smart_Parking_System
- │   │           ├── Car.java
- │   │           │   ├── CarAdapter.java
- │   │           │   ├── MainActivity.java
- │   │           │   └── ParkingLotActivity.java
- │   │           ├── _res
- │   │           │   ├── _layout
- │   │           │   │   ├── activity_main.xml
- │   │           │   │   ├── activity_parking_lot.xml
- │   │           │   │   └── car_item.xml
- │   │           │   └── ...
- │   │           └── ...
- │   │      
- │   │   
+ │   │   │       ├── _java/com/example/Smart_Parking_System
+ │   │   │       ├── Car.java
+ │   │   │       │   ├── CarAdapter.java
+ │   │   │       │   ├── MainActivity.java
+ │   │   │       │   └── ParkingLotActivity.java
+ │   │   │       ├── _res
+ │   │   │       │   ├── _layout
+ │   │   │       │   │   ├── activity_main.xml
+ │   │   │       │   │   ├── activity_parking_lot.xml
+ │   │   │       │   │   └── car_item.xml
+ │   │   │       │   └── ...
+ │   │   │       └── ... 
+ │   │   └── ...
  │   └── ... 
  │
  ├── _Web  
