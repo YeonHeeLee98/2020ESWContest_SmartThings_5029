@@ -16,7 +16,7 @@
 
 ## 개발 환경 
 <table>
-    <thead>
+    <thead align="center">
         <tr>
             <th>  </th>
             <th>IoT CCTV 영역</th>
