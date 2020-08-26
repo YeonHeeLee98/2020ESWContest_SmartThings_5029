@@ -3,9 +3,7 @@
 <h1 align="center"> ParkingScanner </h1>
 
 
-## 개요
-
-2020 임베디드 소프트웨어 경진대회 'Smart Things' 부문 주차의 민족 팀
+<h1 align="center">2020 임베디드 소프트웨어 경진대회 'Smart Things' 부문 주차의 민족 팀  </h1>
 
 ## 시스템 개요 
 
