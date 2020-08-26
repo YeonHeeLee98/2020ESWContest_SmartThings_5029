@@ -24,10 +24,22 @@
 ```
  ├── _Android  
  │   ├── _.idea  
- │       ├── _codeStyles  
- │       │   └── Project.xml  
- │       └── gradle.xml  
- │   ├── _app  
+ │   ├── _app
+ │   │   ├── _libs
+ │   │   ├── _src
+ │   │   │   ├── _androidTest/java/com/example/Smart_Parking_System
+ │   │   │   ├── _main
+ │   │   │   │   ├── _res
+ │   │   │   │   │   ├── _layout
+ │   │   │   │   │   │   ├── activity_main.xml
+ │   │   │   │   │   │   ├── activity_parking_lot.xml
+ │   │   │   │   │   │   └── car_item.xml
+ │   │   │   │   │   └── ...
+ │   │   │   │   └── ...
+ │   │   │   └── _test/java/com/example/Smart_Parking_System
+ │   │   ├── .gitignore
+ │   │   ├── build.gradle
+ │   │   └── proguard-rules.pro
  │   ├── _gradle/wrapper  
  │   ├── .gitignore  
  │   ├── build.gradle  
