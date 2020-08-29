@@ -54,7 +54,7 @@ public class ParkingLotActivity extends AppCompatActivity {
     CarAdapter mAdapter; // 데이터를 연결할 어댑터
 
     //Tmap
-    private final String TMAP_API_KEY = " ";
+    private final String TMAP_API_KEY = " "; //Tmap API Key 
     private TMapTapi tmaptapi = null;
 
 
