@@ -82,7 +82,7 @@
         <tr>
             <td><b> 라이브러리 </b></td>
             <td> Pyspark3.0 </td>
-            <td>OpenCV,Pyspark3.0,Tensorflow2.0,Numpy 1.16</td>
+            <td>OpenCV<br/>Pyspark3.0<br/>Tensorflow2.0<br/>Numpy 1.16</td>
             <td>Firebase JavaScript SDK</td>
             <td>Firebase Android SDK</td>
         </tr>
