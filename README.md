@@ -51,8 +51,8 @@
     <thead align="center">
         <tr align="center">
             <th>  </th>
-            <th>IoT CCTV 영역</th>
-            <th>영상 처리</th>
+            <th>IoT 영역</th>
+            <th>영상분석 영역</th>
             <th>Wep App</th>
             <th>Android App</th>
         </tr>
@@ -74,14 +74,14 @@
         </tr>
         <tr>
             <td><b> 프레임워크 </b></td>
-            <td> </td>
-            <td>Apache Spark</td>
+            <td> Apache Spark </td>
+            <td></td>
             <td> </td>
             <td> </td>
         </tr>
         <tr>
             <td><b> 라이브러리 </b></td>
-            <td></td>
+            <td> Pyspark3.0 </td>
             <td>OpenCV,Pyspark3.0,Tensorflow2.0,Numpy 1.16</td>
             <td>Firebase JavaScript SDK</td>
             <td>Firebase Android SDK</td>
