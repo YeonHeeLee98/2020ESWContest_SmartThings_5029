@@ -18,7 +18,7 @@ transformation
 각 section 별 정해진 좌표 기준으로 자르기 ( 전처리 )
 --- 자세히 ---
 '''
-def prep(section_pts, file_path):
+def partition(section_pts, file_path):
         target_location = np.float32([[0, 0], [0, 150], [150, 0], [150, 150]])
         file_list = [file_path + file_name for file_name in os.listdir(file_path)]
         target_file = sorted(file_list)[-1]
@@ -56,7 +56,7 @@ def section(section_flag, dir_path, origin):
     section_rdd = rdd.map(lambda x: (section_flag, x)).groupByKey().mapValues(lambda x: [i for i in x]).\
             filter(lambda x: x[0] == section_flag).flatMap(lambda x: x[1]).map(lambda x: np.float32(x))
     
-    dst = section_rdd.map(lambda x: prep(x, dir_path)).collect()
+    dst = section_rdd.map(lambda x: partition(x, dir_path)).collect()
     if not start_flag:
         origin.extend(dst) # if error find here
     else:

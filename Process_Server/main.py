@@ -1,82 +1,85 @@
-import vid_server
-import time
 import multiprocessing
-from queue import Queue
-import cv2
+import receive_client
+# from queue import Queue
+import socket,time,pprint
 import os
 import numpy as np
-from pprint import pprint
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import db
-from firebase_test import *
 import pickle as pkl
-from yolo.yolo_methods import *
-import tensorflow as tf
-from CarUtility.car_obs import *
-from CarPlate.car_number_model import * 
+import car_observe2
+import yolo.park_other_place
 from yolo.park_other_place import *
+import CarPlate.car_number_model
+utilize_list = np.zeros((32), dtype=np.int32)
+section_start_num_list = [0, 9, 19, 21]
 
-# Directory List Declaration
-dir_list = ['/home/parking_lot/section1/',
-            '/home/parking_lot/section2/',
-            '/home/parking_lot/section3/',
-            '/home/parking_lot/section4/']
+s1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s1.connect(('IP address', 8080))
+s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s2.connect(('IP address', 7070))
+print('connect success')
 
+# 역할별 pickle 데이터 로드 
+def read_queue(key):
+    if key == 'yolo':
+        dirlist = sorted(os.listdir("user's directory"), reverse = True)
+        with open("user's directory"+dirlist[0], 'rb') as f:
+            output = pkl.load(f)
+    elif key == 'car_plate':
+        dirlist = sorted(os.listdir("user's directory"), reverse = True)
+        with open("user's directory" + dirlist[0], 'rb') as f:
+            output = pkl.load(f)
+    else:
+        dirlist = sorted(os.listdir("user's directory"), reverse = True)
+        with open("user's directory"+dirlist[0], 'rb') as f:
+            output = pkl.load(f)
+    return output # 
 
-physical_devices = tf.config.experimental.list_physical_devices('GPU')
-assert len(physical_devices) > 0, "Not enough GPU hardware devices available"
-tf.config.experimental.set_memory_growth(physical_devices[0], True)
-
-gpus = tf.config.experimental.list_physical_devices('GPU')
-if gpus:
-    # 첫 번째 GPU에 1GB 메모리만 할당하도록 제한
-    try:
-        tf.config.experimental.set_virtual_device_configuration(
-            gpus[0],
-            [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=1024)])
-    except RuntimeError as e:
-        print(e)
-
-
-CAR_OTHER_PLACE_TIME = time.time()
-
-def carutil_main_func(q1, q2, q3, q4, model_structure_path, model_weight_path, loss='binary_crossentropy', optimizer='adam'):
-    global dir_list
-
-    origin1 = []
-    origin2 = []
-    origin3 = []
-    origin4 = []
+#key, value 분리
+def split_key_items(dictionary):
+    keys = list(dictionary.keys())
+    items = np.array(list(dictionary.values()))
+    return keys, items
+# q에 저장된 키값에 따라 해당 키값에 맞는 함수를 호출 후 스레드로 실행
+def read_preprocessed(q, sec_center, sec_img):
     while True:
-        cur_time = time.time()
-        # print(cur_time)
-        # print(cur_time-PROCESS_TIME[0],cur_time-PROCESS_TIME[1],cur_time-PROCESS_TIME[2],cur_time-PROCESS_TIME[3])
-        origin1 = process_image(q1, 0, cur_time, origin1, model_structure_path, model_weight_path, dir_list)
-        time.sleep(1)
-        origin2 = process_image(q2, 1, cur_time, origin2, model_structure_path, model_weight_path, dir_list)
-        time.sleep(1)
-        origin3 = process_image(q3, 2, cur_time, origin3, model_structure_path, model_weight_path, dir_list)
-        time.sleep(1)
-        origin4 = process_image(q4, 3, cur_time, origin4, model_structure_path, model_weight_path, dir_list)
-        time.sleep(1)
+        print('process size : ',q.qsize())
+        if q.qsize():
+            key = q.get()
+            input_data = read_queue(key)
+            # print('process', key)
+            if key == 'yolo':
+                pr = multiprocessing.Process(target = yolo.park_other_place.detection_park_other_place, args = (yolo_net, yolo_meta, input_data, sec_center, sec_img, ))
+                pr.deamon = True
+                pr.start()
+                print('yolo thread start')
+            elif key == 'car_plate':
+                pr = multiprocessing.Process(target = CarPlate.car_number_model.detection_carplate, args = (input_data, 'model structure json file', 'model weight file'))
+                pr.deamon = True
+                pr.start()
+                print('car plate search start')
+            else:   
+                keys,items = split_key_items(input_data)
+                pr = multiprocessing.Process(target = car_observe2.process_image, args = (keys, items, int(key)-1, 'model structure json file', 'model weight file', s,))
+                pr.deamon = True
+                pr.start()
+        time.sleep(5)
 
-
+# read_preprocessed(rq)
 if __name__ == '__main__':
-    yolo_net, yolo_meta = yolo_model_load(read_cfg='yolov3.cfg',
-                                          read_weight='yolov3.weights',
-                                          read_data='coco.data')
-    pr1 = multiprocessing.Process(target=vi_server1.server1, args=(q1, 'data_section1', 'record_section1', 'server1', 8000))
-    pr2 = multiprocessing.Process(target=vi_server2.server2, args=(q2,'data_section2', 'record_section2', 'server2', 8001))
-    pr3 = multiprocessing.Process(target=vi_server3.server3, args=(q3,'data_section3', 'record_section3', 'server3', 8002))
-    pr4 = multiprocessing.Process(target=vi_server4.server4, args=(q4,'data_section4', 'record_section4', 'server4', 8003))
-    pr5 = multiprocessing.Process(target=carutil_main_func, args=(q1, q2, q3, q4, 'car_model_4.json', 'car_model_4.hdf5',))
-    pr6 = multiprocessing.Process(target=detection_carplate, args=('car_num.json', 'car_num.h5',))
-    pr7 = multiprocessing.Process(target=detection_park_other_place, args=(yolo_net, yolo_meta, dir_list, ))
+    yolo_net, yolo_meta = yolo.park_other_place.yolo_model_load(read_cfg='yolov3.cfg',
+                                              read_weight="user's weight file",
+                                              read_data="user's data file" )
+    rq = multiprocessing.Queue()
+    sec_center = multiprocessing.Queue()
+    sec_center.put([[],[],[],[]])
+    sec_img = multiprocessing.Queue()
+    sec_img.put([[], [], [], []])
+    pr1 = multiprocessing.Process(target = receive_client.receive_thread, args = (rq, s1, ))
+    pr2 = multiprocessing.Process(target = receive_client.receive_thread, args = (rq, s2, ))
+    pr3 = multiprocessing.Process(target = read_preprocessed, args = (rq,sec_center, sec_img, ))
+    # pr1.deamon = True
+    pr2.deamon = True
+    pr3.deamon = True
     pr1.start()
     pr2.start()
     pr3.start()
-    pr4.start()
-    pr5.start()
-    pr6.start()
-    pr7.start()

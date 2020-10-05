@@ -7,13 +7,15 @@ from uuid import uuid4
 
 
 #Firebase database 인증 및 앱 초기화
-cred = credentials.Certificate("eswcontest-smartthings-firebase-adminsdk-sawj4-5b7fed513d.json")
+cred = credentials.Certificate("eswcontest-smartthings-firebase-adminsdk-sawj4-5b7fed513d.json") #인증
 firebase_admin.initialize_app(cred,{
     'databaseURL' : "https://eswcontest-smartthings.firebaseio.com", 'storageBucket': "eswcontest-smartthings.appspot.com"
 })
 #버킷은 바이너리 객체의 상위 컨테이너이다. 버킷은 Storage에서 데이터를 보관하는 기본 컨테이너이다.
 bucket = storage.bucket()
 
+
+#Firebase에 불법주차 차량 이미지 업로드
 def fileUpload(file, car_num_name):
     blob = bucket.blob('images/'+car_num_name + '.jpg') # 사진이 저장 될 주소
     #new token and metadata 설정
@@ -25,6 +27,7 @@ def fileUpload(file, car_num_name):
     blob.upload_from_filename(filename=file, content_type='image/jpeg')
     print(blob.public_url)
 
+#Update Firebase
 def firebase_update(num,value):
 
     ref = db.reference().child('object/carData') #db 위치 지정
@@ -38,9 +41,10 @@ def firebase_update(num,value):
         dic[names[0]+str(num[i])] = { names[1] : bool(value[i]),names[2] : num[i]}
 
     print(dic)
-    ref.update(dic) # d여기에 json 내용
-    # ref2.update(dic)  # d여기에 json 내용
+    ref.update(dic)
 
+
+#불법주차 차량 번호 업데이트
 def fire_base_carnum(car_char):
     ref = db.reference().child('object/guestData') #db 위치 지정
     now = datetime.now()
@@ -53,6 +57,7 @@ def fire_base_carnum(car_char):
             })
         # print(car_num)
 
+#불법주차 차량 개수 업데이트
 def fire_base_illegal(car_count):
     ref = db.reference().child('object/cntIllegal')
     ref.update(

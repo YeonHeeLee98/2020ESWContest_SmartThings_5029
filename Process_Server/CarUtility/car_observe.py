@@ -1,7 +1,3 @@
-import vi_server1
-import vi_server2
-import vi_server3
-import vi_server4
 import time
 import multiprocessing
 from queue import Queue
@@ -9,17 +5,16 @@ import cv2
 import os
 import numpy as np
 from pprint import pprint
-import new_section_split2
+import CarUtility.section_split as section_split
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
-from firebase_test import *
-from car_number_preprocessing import *
-import darknet as dn
+from firebase_update import *
+from CarPlate.car_number_preprocessing import *
+import yolo.darknet as dn
 import pickle as pkl
 from yolo import *
 import tensorflow as tf
-from car_obs import *
 
 
 
@@ -51,14 +46,14 @@ sec_center = [[], [], [], []]
 sec_img = [[], [], [], []]
 
 
-def process_image(q, SERVER_FLAG, start_flag, origin, model_structure_path, model_weight_path, dir_list, 
+def process_image(q, SERVER_FLAG, origin, model_structure_path, model_weight_path, dir_list, 
                   loss='binary_crossentropy', optimizer='adam'):
     global UTILIZE_FLAG
     global utilize_list
     value = q.get()
     current_time = time.time()
     if value:
-        img, idx, origin = new_section_split2.section(SERVER_FLAG, dir_list[SERVER_FLAG],
+        img, idx, origin = section_split.section(SERVER_FLAG, dir_list[SERVER_FLAG],
                                                       origin)
         if len(img) == 0:
             q.put(False)
