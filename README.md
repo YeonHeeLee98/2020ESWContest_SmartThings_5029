@@ -104,10 +104,6 @@
             <td><b> 버전 관리 </b></td>
             <td colspan=4>GitHub</td>
         </tr>
-        <tr>
-            <td><b> 기타 </b></td>
-            <td colspan=4>Google Meet, Google Drive</td>
-        </tr>
     </tbody>
 </table>
 
