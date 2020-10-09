@@ -145,23 +145,34 @@
  │   ├── firebase.json
  │   └── package-lock.json
  │
+ ├── _IoT_CCTV
+ │   ├── _IoT_CCTV1.py
+ │   └── _IoT_CCTV2.py
+ │
+ ├── _gateway1 
+ │   ├── cv2_compare.py
+ │   ├── yolo_methods.py
+ │   ├── spark_methods.py
+ │   └── IoT_gateway1.py
+ │
+ ├── _gateway2 
+ │   ├── car_number_preprocessing.py
+ │   └── IoT_gateway2.py
+ │
  ├── _Process_Server  
- │   ├── _CarPlate 
- │   │   ├── car_number_model.py
- │   │   └── car_number_preprocessing.py
- │   ├── _CarUtility
- │   │   ├── car_obs.py
- │   │   └── new_section_split2.py
- │   ├── _yolo
- │   │   ├── darknet.py
- │   │   ├── park_other_place.py
- │   │   └── yolo_methods.py
- │   │
- │   ├── cv2_compare.py 
- │   ├── firebase_test.py
  │   ├── main.py
- │   ├── measure_img_similarity.py
- │   └── vid_server.py
+ │   ├── receive_cliient.py
+ │   ├── firebase_update.py
+ │   │
+ │   ├── _CarPlate 
+ │   │   └── car_number_plate.py
+ │   ├── _CarUtility
+ │   │   └── car_observe2.py
+ │   └── _yolo
+ │       ├── darknet.py
+ │       ├── park_other_place.py
+ │       └── yolo_methods.py
+ │    
  │
  └── README.md  
  ```
