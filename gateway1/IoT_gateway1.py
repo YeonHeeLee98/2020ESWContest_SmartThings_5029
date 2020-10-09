@@ -6,10 +6,11 @@ import pickle as pkl
 import cv2
 from multiprocessing import Queue
 import time
-from spark_methods import *
 from cv2_compare import *
 from pyspark import SparkContext
 import numpy as np
+import numpy as np
+import cv2
 
 '''
 section_start_num_list : 각 주차구역의 주차공간 시작번호
@@ -49,6 +50,37 @@ s.listen(6) # 최대 수신 값 지정 및 수신 대기
 sc = SparkContext(master='local[*]')
 
 #pts_list : 각 주차구역 분할을 위한 좌표 데이터
+#주차공간 추출을 위한 병렬연산
+'''
+section_pts : 해당 주차구역의 분할을 위한 좌표
+target_location : 원근법 변환에 대한 목표 위치
+move_value : 기울어진 주차공간 원근법 변환
+dst : 분할된 주차구역(주차공간)
+'''
+def prep(section_pts,img):
+    target_location = np.float32([[0,0],[0,150],[150,0],[150,150]])
+    move_value = cv2.getPerspectiveTransform(section_pts,target_location)
+    dst = cv2.warpPerspective(img, move_value, (150,150))
+    return dst
+
+
+#Spark를 활용한 전처리 과정 병렬연산
+'''
+rdd : 데이터 분산 (각 코어에 할당)
+section_rdd : 필요한 데이터 형태로 가공(Transformation)
+dst ; 전처리 과정 연산(Transformation) 후 연산된 데이터 가져오기(Action)
+'''
+def do_spark(section_number, img, pts_list,spark_context):
+    rdd = spark_context.parallelize(pts_list[section_number])
+    section_rdd = rdd.map(lambda x: (section_number, x)).groupByKey().mapValues(lambda x: [i for i in x]).\
+            filter(lambda x: x[0] == section_number).flatMap(lambda x: x[1]).map(lambda x: np.float32(x))
+    dst = section_rdd.map(lambda x: prep(x, img)).collect()
+    return dst
+
+#key(주차공간 번호) 반환
+def get_key(dict):
+    return list(dict.keys())[0]
+
 with open('pts.pkl', 'rb') as fr:
     pts_list = pkl.load(fr)
 
