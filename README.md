@@ -190,7 +190,7 @@
   - 김도경 / jes1456@naver.com
 
 ## 시연 동영상 
-[youtube](https://bit.ly/33IVRsn).
+[youtube](https://bit.ly/33IVRsn)
 
 
 
