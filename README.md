@@ -47,7 +47,7 @@
 
 
 ## 시스템 구조
-<p align="center"><img src="./img/전체 아키텍쳐.png" width="800" style="border-radius:10%"></p>
+<p align="center"><img src="./img/전체 아키텍처.png" width="800" style="border-radius:10%"></p>
 
 ## 개발 환경 
 <table>
