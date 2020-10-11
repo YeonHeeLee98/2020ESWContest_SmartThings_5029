@@ -11,6 +11,8 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;본 시스템은 IoT CCTV를 활용한 딥러닝 영상처리 기반의 스마트 주차 관리 시스템이다. 이는 실시간 CCTV 영상분석을 통해 분석된 결과를 사용자와 관리자에게 제공한다. 사용자는 해당 시스템으로부터 주차장 이용률, 각 주차공간별 주차 여부 및 주차장의 정보를 제공받는다. 또한 관리자는 주차장의 이용률 및 주차장의 불법주차 여부를 제공받는다. 이를 통해 관리자는 주차장을 효율적으로 관리하며, 주차장 사용자에게는 보다 질 높은 서비스를 제공한다.
 
+<p align="center"><img src="./img/대표사진.png" width="800" style="border-radius:10%"></p>
+
 1.  <b>IoT 영역</b>
     - IoT CCTV 기반의 실시간 영상 전송
         - IoT CCTV는 주차장의 주차구역 촬영을 수행하며, Wi-Fi 무선 근거리 통신망을 통해 IoT Gateway로 실시간으로 영상을 전송 
@@ -84,10 +86,10 @@
         </tr>
         <tr>
             <td><b> 라이브러리 </b></td>
-            <td> Pyspark3.0 </td>
-            <td>OpenCV<br/>Pyspark3.0<br/>Tensorflow2.0<br/>Numpy 1.16</td>
-            <td>Firebase JavaScript SDK</td>
-            <td>Firebase Android SDK</td>
+            <td> Pyspark3.0<br/>OpenCV<br/>Numpy 1.16</td>
+            <td>OpenCV<br/>Tensorflow2.1<br/>Numpy1.16<br/>YOLO v3</td>
+            <td>Firebase<br/>JavaScript SDK</td>
+            <td>Firebase<br/>Android SDK</td>
         </tr>
         <tr>
             <td><b> 개발 보드</b></td>
@@ -186,6 +188,9 @@
   - 노재영 / groove38@naver.com
   - 손주형 / jhson722@naver.com
   - 김도경 / jes1456@naver.com
+
+## 시연 동영상 
+[youtube](https://bit.ly/33IVRsn).
 
 
 
