@@ -192,7 +192,7 @@
   - 김도경 / jes1456@naver.com
 
 ## 시연 동영상 
-[youtube](https://bit.ly/33IVRsn)
+[Youtube Link](https://www.youtube.com/watch?v=3IFmuurs838&t=9s)
 
 
 
