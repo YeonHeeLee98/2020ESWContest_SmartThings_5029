@@ -94,7 +94,7 @@
         </tr>
         <tr>
             <td><b> 개발 보드</b></td>
-            <td>RPI3B+</td>
+            <td>RPI 3B+</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -109,6 +109,7 @@
         </tr>
     </tbody>
 </table>
+
 
 
 ## 디렉토리 구조
