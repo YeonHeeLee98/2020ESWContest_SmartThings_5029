@@ -95,7 +95,7 @@
         </tr>
         <tr>
             <td><b> 개발 보드</b></td>
-            <td>RPI3B+</td>
+            <td>RPI 3B+</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -110,6 +110,7 @@
         </tr>
     </tbody>
 </table>
+
 
 
 ## 디렉토리 구조
@@ -193,6 +194,4 @@
 
 ## 시연 동영상 
 [Youtube Link](https://www.youtube.com/watch?v=3IFmuurs838&t=9s)
-
-
 
