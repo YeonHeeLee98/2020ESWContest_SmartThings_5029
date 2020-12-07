@@ -42,6 +42,7 @@
         - 불법주차 차량의 사진과 영상분석 영역의 처리결과를 저장하며 서비스 제공 영역의 실시간 동기화를 위해 Firebase를 사용
         <br>
 4. <b>서비스 제공 영역</b>
+    
     - 어플리케이션(주차장 사용자 전용)
         - 주차장 사용자를 대상으로 주차장의 잔여 주차공간 및 이용률을 실시간으로 제공하기 위해 Android OS에 기반으로 개발
     - 웹 페이지(주차장 관리자 전용)
@@ -191,7 +192,7 @@
   - 김도경 / jes1456@naver.com
 
 ## 시연 동영상 
-[youtube](https://bit.ly/33IVRsn)
+[<Youtube Link>](https://www.youtube.com/watch?v=3IFmuurs838&t=9s)
 
 
 
