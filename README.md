@@ -184,12 +184,12 @@
 ## 팀
 
 - 팀명 : 주차의 민족
-- 팀원
+<!--- 팀원
   - 정영석 (Project Leader) / dnfkdi1995@gmail.com
   - 이연희 / yhlee98y@gmail.com
   - 노재영 / groove38@naver.com
   - 손주형 / jhson722@naver.com
-  - 김도경 / jes1456@naver.com
+  - 김도경 / jes1456@naver.com--!>
 
 ## 시연 동영상 
 [Youtube Link](https://www.youtube.com/watch?v=3IFmuurs838&t=9s)
